@@ -7,7 +7,7 @@ from shutil import rmtree
 from sys import stderr
 from threading import Thread
 from time import sleep
-from typing import Any, Dict, Iterable, Optional, Tuple, Union
+from typing import Any, Dict, Iterable, Optional, Tuple
 
 from loguru import logger
 from maxminddb import open_database
@@ -23,9 +23,9 @@ class ProxyScraperChecker:
         timeout: float = 5,
         geolite2_city_mmdb: str = None,
         ip_service: str = "https://ident.me",
-        http_sources: Union[Iterable[str], str, None] = None,
-        socks4_sources: Union[Iterable[str], str, None] = None,
-        socks5_sources: Union[Iterable[str], str, None] = None,
+        http_sources: Iterable[str] = None,
+        socks4_sources: Iterable[str] = None,
+        socks5_sources: Iterable[str] = None,
     ) -> None:
         """Scrape and check proxies from sources and save them to files.
 
