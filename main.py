@@ -7,7 +7,7 @@ from shutil import rmtree
 from sys import stderr
 from threading import Thread
 from time import sleep
-from typing import Any, Dict, Iterable, Optional, Tuple
+from typing import Any, Dict, Iterable, Literal, Optional, Tuple
 
 from loguru import logger
 from maxminddb import open_database
@@ -108,7 +108,9 @@ class ProxyScraperChecker:
         for t in threads:
             t.join()
 
-    def get_source(self, source: str, proto: str) -> None:
+    def get_source(
+        self, source: str, proto: Literal["http", "socks4", "socks5"]
+    ) -> None:
         """Get proxies from source.
 
         Args:
@@ -133,7 +135,9 @@ class ProxyScraperChecker:
         else:
             logger.error(f"{source} status code: {status_code}")
 
-    def check_proxy(self, proxy: str, proto: str) -> None:
+    def check_proxy(
+        self, proxy: str, proto: Literal["http", "socks4", "socks5"]
+    ) -> None:
         """Check proxy validity.
 
         Args:
