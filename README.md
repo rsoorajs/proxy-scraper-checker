@@ -2,8 +2,6 @@
 
 Get and check free anonymous HTTP, SOCKS4, SOCKS5 proxies from different sources. Supports getting exit-node's geolocation for each proxy.
 
-**You can get proxies obtained using this script in [monosans/proxy-list](https://github.com/monosans/proxy-list) (updated every ~15 minutes).**
-
 ## Note about git clone
 
 To make `git clone` much faster, use the `--depth 1` flag.
