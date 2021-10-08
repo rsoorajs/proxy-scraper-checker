@@ -57,8 +57,7 @@ SOCKS5_SOURCES = {
 GEOLOCATION = True
 
 # Service for checking the IP address.
-# For some people "https://checkip.amazonaws.com" is faster than "https://ident.me".
-IP_SERVICE = "https://ident.me"
+IP_SERVICE = "https://checkip.amazonaws.com"
 
 # How many seconds to wait for the proxy to make a connection.
 # Lower value results in getting less proxies but they will be faster.
