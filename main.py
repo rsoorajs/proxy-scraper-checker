@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 from ipaddress import IPv4Address
 from os import mkdir
-from random import shuffle
 from shutil import rmtree
 from sys import stderr
 from threading import Thread
@@ -176,7 +175,6 @@ class ProxyScraperChecker:
             for proto, proxies in self.proxies.items()
             for proxy in proxies
         ]
-        shuffle(threads)
         self.start_threads(threads)
 
     @staticmethod
